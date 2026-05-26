@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1600" />
+<title>Esme Lei — Media Kit 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --blue: #4A7BC8;
+    --red: #E8502A;
+    --green: #6A9E7A;
+    --cream: #F0EDD8;
+    --dark: #1A1A18;
+    --mono: 'Space Mono', monospace;
+    --serif: 'Playfair Display', serif;
+  }
+
+  body {
+    background: #2a2a2a;
+    padding: 40px;
+    font-family: var(--mono);
+  }
+
+  .kit {
+    width: 1440px;
+    margin: 0 auto;
+    background: var(--cream);
+  }
+
+  /* ── PAGE 1: COVER + BIO ── */
+  .page {
+    width: 1440px;
+    height: 810px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .page-1 {
+    background: var(--blue);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .p1-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 60px 56px 60px 72px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .p1-top { display: flex; flex-direction: column; gap: 20px; }
+
+  .kit-tag {
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--cream);
+    opacity: 0.85;
+    border: 1px solid rgba(240,237,216,0.4);
+    display: inline-block;
+    padding: 5px 12px;
+    width: fit-content;
+  }
+
+  .cover-name {
+    font-family: var(--serif);
+    font-size: 100px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--cream);
+  }
+
+  .cover-name em { font-style: italic; color: var(--red); }
+
+  .cover-sub {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cream);
+    opacity: 0.75;
+    line-height: 2;
+  }
+
+  .p1-contact {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--cream);
+    opacity: 0.75;
+    text-transform: uppercase;
+    line-height: 2;
+  }
+
+  .p1-right { position: relative; overflow: hidden; }
+
+  .p1-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    filter: saturate(0.85) contrast(1.05);
+    mix-blend-mode: multiply;
+    opacity: 0.9;
+  }
+
+  .p1-img-tint {
+    position: absolute;
+    inset: 0;
+    background: var(--red);
+    opacity: 0.15;
+    mix-blend-mode: multiply;
+    z-index: 1;
+  }
+
+  .p1-img-fade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, var(--blue) 0%, transparent 30%);
+    z-index: 2;
+  }
+
+  .bio-block {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+    background: rgba(26,26,24,0.88);
+    padding: 32px 36px;
+    width: 55%;
+  }
+
+  .bio-label {
+    font-size: 9px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 12px;
+  }
+
+  .bio-text {
+    font-size: 11px;
+    line-height: 2;
+    color: var(--cream);
+    opacity: 0.92;
+    letter-spacing: 0.02em;
+  }
+
+  /* ── PAGE 2: STATS + PILLARS ── */
+  .page-2 {
+    background: var(--cream);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .p2-left {
+    background: var(--red);
+    padding: 60px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .p2-title {
+    font-family: var(--serif);
+    font-size: 68px;
+    font-weight: 900;
+    line-height: 0.88;
+    color: var(--cream);
+  }
+
+  .p2-title em { font-style: italic; }
+
+  .p2-period {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cream);
+    opacity: 0.75;
+    line-height: 2;
+    margin-top: 16px;
+  }
+
+  .p2-hero {
+    background: var(--dark);
+    padding: 28px 32px;
+    margin-top: 24px;
+  }
+
+  .p2-hero-num {
+    font-family: var(--serif);
+    font-size: 64px;
+    font-weight: 900;
+    color: var(--red);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .p2-hero-label {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--cream);
+    opacity: 0.75;
+    line-height: 1.8;
+  }
+
+  .p2-right {
+    padding: 60px 60px 60px 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+    flex: 1;
+  }
+
+  .stat-block { background: var(--blue); padding: 28px 24px; }
+  .stat-block.alt { background: var(--dark); }
+
+  .stat-num {
+    font-family: var(--serif);
+    font-size: 40px;
+    font-weight: 900;
+    color: var(--cream);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .stat-num.accent { color: var(--red); }
+
+  .stat-label {
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--cream);
+    opacity: 0.82;
+    line-height: 1.7;
+  }
+
+  .stat-sub {
+    font-size: 8px;
+    color: var(--cream);
+    opacity: 0.58;
+    margin-top: 5px;
+    letter-spacing: 0.08em;
+  }
+
+  .pillars-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3px;
+    margin-top: 3px;
+  }
+
+  .pillar-mini { background: var(--green); padding: 18px 16px; }
+
+  .pillar-mini-title {
+    font-family: var(--serif);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--cream);
+    margin-bottom: 6px;
+  }
+
+  .pillar-mini-text {
+    font-size: 9px;
+    line-height: 1.7;
+    color: var(--cream);
+    opacity: 0.88;
+    letter-spacing: 0.02em;
+  }
+
+  /* ── PAGE 3: RATES + COLLABS ── */
+  .page-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 810px;
+  }
+
+  .p3-left {
+    background: var(--dark);
+    padding: 60px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .rates-title {
+    font-family: var(--serif);
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 0.88;
+    color: var(--cream);
+    margin-bottom: 10px;
+  }
+
+  .rates-title em { font-style: italic; color: var(--red); }
+
+  .rates-sub {
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--cream);
+    opacity: 0.55;
+    margin-bottom: 32px;
+  }
+
+  .rate-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(240,237,216,0.12);
+  }
+
+  .rate-name {
+    font-family: var(--serif);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--cream);
+  }
+
+  .rate-desc {
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cream);
+    opacity: 0.55;
+    margin-top: 4px;
+  }
+
+  .rate-price {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--red);
+    white-space: nowrap;
+  }
+
+  .rate-cad { font-size: 10px; opacity: 0.6; color: var(--cream); }
+
+  .rates-addons {
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    color: var(--cream);
+    opacity: 0.55;
+    line-height: 2.2;
+    text-transform: uppercase;
+    margin-top: 24px;
+    border-top: 1px solid rgba(240,237,216,0.12);
+    padding-top: 20px;
+  }
+
+  .p3-right {
+    background: var(--cream);
+    padding: 60px 52px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .collabs-title {
+    font-family: var(--serif);
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 0.88;
+    color: var(--dark);
+    margin-bottom: 20px;
+  }
+
+  .collabs-title em { font-style: italic; color: var(--blue); }
+
+  .collab-featured {
+    background: var(--blue);
+    padding: 22px 24px;
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .collab-featured.second { background: var(--red); }
+
+  .collab-brand-big {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--cream);
+    line-height: 1.2;
+  }
+
+  .collab-detail-wrap { display: flex; flex-direction: column; gap: 7px; }
+
+  .collab-tag {
+    display: inline-block;
+    background: rgba(240,237,216,0.2);
+    color: var(--cream);
+    font-size: 8px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    width: fit-content;
+  }
+
+  .collab-detail {
+    font-size: 10px;
+    line-height: 1.9;
+    color: var(--cream);
+    opacity: 0.88;
+    letter-spacing: 0.03em;
+  }
+
+  .collabs-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3px;
+  }
+
+  .collab-block { background: var(--green); padding: 16px 14px; }
+
+  .collab-brand {
+    font-family: var(--serif);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--cream);
+    margin-bottom: 5px;
+  }
+
+  .collab-type {
+    font-size: 8px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--cream);
+    opacity: 0.72;
+  }
+
+  /* FOOTER */
+  .footer-bar {
+    background: var(--dark);
+    padding: 18px 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-name {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--cream);
+  }
+
+  .footer-contact {
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    color: var(--cream);
+    opacity: 0.6;
+    text-transform: uppercase;
+    text-align: right;
+    line-height: 2;
+  }
+
+  .page-label {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cream);
+    opacity: 0.4;
+  }
+</style>
+</head>
+<body>
+<div class="kit">
+
+  <!-- PAGE 1: COVER + BIO -->
+  <div class="page page-1">
+    <div class="p1-left">
+      <div class="p1-top">
+        <div class="kit-tag">Media Kit · 2026</div>
+        <div class="cover-name">Esme<br><em>Lei</em></div>
+        <div class="cover-sub">Content Creator · Toronto, CA<br>Lifestyle · DIY · Fashion · Culture</div>
+      </div>
+      <div class="p1-contact">@esme.lei · Commongoods.studio@gmail.com</div>
+    </div>
+    <div class="p1-right">
+      <img class="p1-img" src="esme_photo.jpeg" alt="Esme Lei" />
+      <div class="p1-img-tint"></div>
+      <div class="p1-img-fade"></div>
+      <div class="bio-block">
+        <div class="bio-label">About</div>
+        <div class="bio-text">Hi I'm Esme, your internet messy big sister. I make content that feels lived-in, not scripted. No teleprompter energy, just genuine recommendations and useful tips that make my audience feel like they've found a hack. When something genuinely works, my audience show up for it. My job is finding the creative angle that makes the result impossible to ignore.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 2: STATS + PILLARS -->
+  <div class="page page-2">
+    <div class="p2-left">
+      <div>
+        <div class="p2-title">By the<br><em>numbers.</em></div>
+        <div class="p2-period">Instagram · Apr 26 – May 25, 2026</div>
+      </div>
+      <div class="p2-hero">
+        <div class="p2-hero-num">2.18M</div>
+        <div class="p2-hero-label">Total views in 30 days<br>with 81K followers</div>
+      </div>
+    </div>
+    <div class="p2-right">
+      <div class="stats-grid">
+        <div class="stat-block">
+          <div class="stat-num">81.8K</div>
+          <div class="stat-label">Followers</div>
+          <div class="stat-sub">+1% this period</div>
+        </div>
+        <div class="stat-block alt">
+          <div class="stat-num accent">18.64%</div>
+          <div class="stat-label">Engagement Rate</div>
+          <div class="stat-sub">Industry avg: 1–3%</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num">303K</div>
+          <div class="stat-label">Total Interactions</div>
+          <div class="stat-sub">30-day period</div>
+        </div>
+        <div class="stat-block alt">
+          <div class="stat-num">1.36M</div>
+          <div class="stat-label">Accounts Reached</div>
+          <div class="stat-sub">+29.6% growth</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num accent">98.2%</div>
+          <div class="stat-label">Non-follower Reach</div>
+          <div class="stat-sub">Content travels far</div>
+        </div>
+        <div class="stat-block alt">
+          <div class="stat-num">99.8%</div>
+          <div class="stat-label">Reels Engagement</div>
+          <div class="stat-sub">Dominant format</div>
+        </div>
+      </div>
+      <div class="pillars-strip">
+        <div class="pillar-mini">
+          <div class="pillar-mini-title">Home & DIY</div>
+          <div class="pillar-mini-text">Renter-friendly builds and budget transformations that actually work.</div>
+        </div>
+        <div class="pillar-mini">
+          <div class="pillar-mini-title">Fashion</div>
+          <div class="pillar-mini-text">Wearable styling and DIY fashion with zero gatekeeping.</div>
+        </div>
+        <div class="pillar-mini">
+          <div class="pillar-mini-title">Culture</div>
+          <div class="pillar-mini-text">Hot takes and commentary that make people feel seen.</div>
+        </div>
+        <div class="pillar-mini">
+          <div class="pillar-mini-title">Real Life</div>
+          <div class="pillar-mini-text">Unfiltered, funny, and genuinely lived-in everyday content.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 3: RATES + COLLABS -->
+  <div class="page-3">
+    <div class="p3-left">
+      <div>
+        <div class="rates-title">Rates &<br><em>Packages</em></div>
+        <div class="rates-sub">All prices in Canadian dollars</div>
+        <div class="rate-row">
+          <div>
+            <div class="rate-name">Instagram Reel</div>
+            <div class="rate-desc">Dedicated sponsored reel</div>
+          </div>
+          <div><span class="rate-cad">CAD </span><span class="rate-price">3,000</span></div>
+        </div>
+        <div class="rate-row">
+          <div>
+            <div class="rate-name">Instagram Carousel</div>
+            <div class="rate-desc">Dedicated sponsored post</div>
+          </div>
+          <div><span class="rate-cad">CAD </span><span class="rate-price">2,000</span></div>
+        </div>
+        <div class="rate-row">
+          <div>
+            <div class="rate-name">Story Set</div>
+            <div class="rate-desc">3-slide story sequence</div>
+          </div>
+          <div><span class="rate-cad">CAD </span><span class="rate-price">500</span></div>
+        </div>
+        <div class="rate-row">
+          <div>
+            <div class="rate-name">Reel + Story Bundle</div>
+            <div class="rate-desc">Reel + 3-slide story set</div>
+          </div>
+          <div><span class="rate-cad">CAD </span><span class="rate-price">4,000</span></div>
+        </div>
+      </div>
+      <div class="rates-addons">
+        TikTok cross-post +25% · Ad code & usage rights +40%<br>
+        6-month exclusivity +30% · Custom packages available
+      </div>
+    </div>
+
+    <div class="p3-right">
+      <div class="collabs-title">Selected<br><em>Collabs</em></div>
+      <div class="collab-featured">
+        <div class="collab-brand-big">Origins</div>
+        <div class="collab-detail-wrap">
+          <div class="collab-tag">Artist Collaboration</div>
+          <div class="collab-detail">Commissioned to design and handcraft 100 custom ceramic pots for Origins' Earth Month brand mailer — each piece designed to echo the brand's nature-inspired identity, bridging fine craft with intentional storytelling.</div>
+        </div>
+      </div>
+      <div class="collab-featured second">
+        <div class="collab-brand-big">Residence<br>Supply</div>
+        <div class="collab-detail-wrap">
+          <div class="collab-tag">Paid Partnership</div>
+          <div class="collab-detail">Paid content partnership creating dedicated sponsored content aligned with brand creative direction and authentic audience storytelling.</div>
+        </div>
+      </div>
+      <div class="collabs-row">
+        <div class="collab-block">
+          <div class="collab-brand">Yellow Pop</div>
+          <div class="collab-type">Brand Partnership</div>
+        </div>
+        <div class="collab-block">
+          <div class="collab-brand">Neewer</div>
+          <div class="collab-type">Brand Partnership</div>
+        </div>
+        <div class="collab-block">
+          <div class="collab-brand">Xbloom</div>
+          <div class="collab-type">Brand Partnership</div>
+        </div>
+        <div class="collab-block">
+          <div class="collab-brand">Ozark</div>
+          <div class="collab-type">Brand Partnership</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer-bar">
+    <div class="page-label">01 / 03</div>
+    <div class="footer-name">Esme Lei</div>
+    <div class="footer-contact">@esme.lei · Commongoods.studio@gmail.com · Toronto, CA</div>
+  </div>
+
+</div>
+</body>
+</html>
